@@ -40,7 +40,6 @@ const calcAge2 = function (birthYear) {
 };
 const age2 = calcAge2(1991);
 console.log(age1, age2);
-*/
 
 //Arrow Expression
 const calcAge3 = (birthYear) => 2037 - birthYear;
@@ -56,3 +55,52 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1991, "Jonas"));
 console.log(yearsUntilRetirement(1980, "Bob"));
+
+const friend1 = "Michael";
+const friend2 = "Steven";
+const friend3 = "Peter";
+
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+const years = new Array(1991, 1984, 2008, 2020);
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Jay";
+console.log(friends);
+*/
+
+const friends = ["Michael", "Steven", "Peter"];
+
+// Add Elements
+const newLength = friends.push("Jay");
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("John");
+console.log(friends);
+
+//Remove Elements
+friends.pop();
+const popped = friends.pop();
+console.log(friends);
+console.log(popped);
+
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf("Steven"));
+console.log(friends.indexOf("Bob"));
+
+friends.push(23);
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes(23));
+
+if (friends.includes("Steven")) {
+  console.log("You have a friend call Steven!");
+}
