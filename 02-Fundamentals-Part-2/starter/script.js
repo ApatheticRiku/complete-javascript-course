@@ -72,7 +72,6 @@ console.log(friends[friends.length - 1]);
 
 friends[2] = "Jay";
 console.log(friends);
-*/
 
 const friends = ["Michael", "Steven", "Peter"];
 
@@ -104,3 +103,12 @@ console.log(friends.includes(23));
 if (friends.includes("Steven")) {
   console.log("You have a friend call Steven!");
 }
+*/
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+};
