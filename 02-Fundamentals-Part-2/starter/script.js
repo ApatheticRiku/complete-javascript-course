@@ -141,7 +141,6 @@ console.log(jonas);
 console.log(
   `${jonas.firstName} has ${jonas.friends.length}, and his best friend is called ${jonas.friends[0]}`
 );
-*/
 
 const jonas = {
   firstName: "Jonas",
@@ -178,3 +177,8 @@ console.log(jonas.age);
 console.log(jonas.age);
 
 console.log(jonas.getSummary());
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
+}
+*/
