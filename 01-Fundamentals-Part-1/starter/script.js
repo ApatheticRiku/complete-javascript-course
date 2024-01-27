@@ -169,7 +169,6 @@ if (height) {
 } else {
   console.log("Height is UNDEFINED");
 }
-*/
 
 const day = "wednesday";
 
@@ -196,3 +195,14 @@ switch (day) {
     console.log("Not a valid day");
     break;
 }
+*/
+
+const age = 23;
+// age >= 18
+//   ? console.log("I like to drink wine")
+//   : console.log("I like to drink water");
+
+const drink = age >= 18 ? "wine" : "water";
+console.log(drink);
+
+console.log(`I like to drink ${age >= 19 ? "wine" : "water"}`);
