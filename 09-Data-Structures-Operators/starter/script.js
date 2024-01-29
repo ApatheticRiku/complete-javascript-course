@@ -54,6 +54,59 @@ const restaurant = {
   },
 };
 
+const rest1 = {
+  name: "Capri",
+  // numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: "La Piazza",
+  owner: "Giovanni Rossi",
+};
+
+// OR assignment operator
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+//nullish assignment operator
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+// rest1.owner = rest1.owner && "<ANONYMOUS>";
+// rest2.owner = rest2.owner && "<ANONYMOUS>";
+rest1.owner &&= "<ANONYMOUS";
+rest2.owner &&= "<ANONYMOUS";
+
+console.log(rest1);
+console.log(rest2);
+
+/*
+// restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+// Use ANY data type, return ANY data type, short-circuiting
+console.log(3 || "Jonas");
+console.log("" || "Jonas");
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || "" || "Hello" || 23 || null);
+
+// restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
 // 1) Destructuring
 
 const [a, b, ...others] = [1, 2, 3, 4, 5];
@@ -87,7 +140,6 @@ add(...x);
 restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
 restaurant.orderPizza("mushrooms");
 
-/*
 const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArr);
