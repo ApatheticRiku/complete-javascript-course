@@ -53,6 +53,30 @@ const restaurant = {
   },
 };
 
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+
+console.log(openStr);
+
+// Property VALUES
+const values = Object.values(openingHours);
+console.log(values);
+
+// Entire object
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} we open at ${open} and close at ${close}.`);
+}
+
+/*
 if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
 
 // WITHOUT optional chaining
@@ -86,7 +110,7 @@ const users2 = [];
 console.log(users[0]?.name ?? "User array empty");
 console.log(users2[0]?.name ?? "User array empty");
 
-/*
+
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const item of menu) console.log(item);
