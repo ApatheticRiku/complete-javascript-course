@@ -53,6 +53,7 @@ const restaurant = {
   },
 };
 
+/*
 const properties = Object.keys(openingHours);
 console.log(properties);
 
@@ -76,7 +77,6 @@ for (const [day, { open, close }] of entries) {
   console.log(`On ${day} we open at ${open} and close at ${close}.`);
 }
 
-/*
 if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
 
 // WITHOUT optional chaining
@@ -298,7 +298,7 @@ console.log(main, secondary);
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse);
 */
-/*
+
 /////////////////////////////////////////////
 // Coding Challenge #1
 
@@ -343,6 +343,30 @@ const game = {
   },
 };
 
+// 1
+for (const [i, score] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${score}`);
+}
+
+// 2
+let avg = 0;
+for (const odd of Object.values(game.odds)) {
+  avg += odd;
+}
+avg /= Object.values(game.odds).length;
+console.log(avg);
+
+// 3
+const entries = Object.entries(game.odds);
+for (const entry of entries) {
+  if (game[entry[0]]) {
+    console.log(`Odd of victory ${game[entry[0]]}: ${entry[1]}`);
+  } else {
+    console.log(`Odd of draw: ${entry[1]}`);
+  }
+}
+
+/*
 const [players1, players2] = game.players;
 console.log(players1, players2);
 
